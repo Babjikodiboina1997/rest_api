@@ -1,0 +1,10 @@
+PS C:\Users\kbabjix\OneDrive - Intel Corporation\Desktop\rest_api> python -u "c:\Users\kbabjix\OneDrive - Intel Corporation\Desktop\rest_api\new_exercise\test3.py"
+Booking created successfully. Booking ID: 135
+.AssertionError in test_delete_booking: unexpectedly None : Booking ID is required for this test.
+.AssertionError in test_get_booking: unexpectedly None : Booking ID is required for this test.
+.AssertionError in test_update_booking: unexpectedly None : Booking ID is required for this test.
+.
+----------------------------------------------------------------------
+Ran 4 tests in 1.515s
+
+OK
