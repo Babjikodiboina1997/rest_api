@@ -1,0 +1,42 @@
+Testing started at 4:16 PM ...
+Launching pytest with arguments C:/Users/kbabjix/PycharmProjects/rest_booker/test_booking.py --no-header --no-summary -q in C:\Users\kbabjix\PycharmProjects\rest_booker
+
+============================= test session starts =============================
+collecting ... collected 4 items
+
+test1.py::test_create_booking PASSED                                     [ 25%]
+test1.py::test_get_booking PASSED                                        [ 50%]
+test1.py::test_update_booking FAILED                                     [ 75%]Bad Request
+
+test1.py:85 (test_update_booking)
+400 != 200
+
+Expected :200
+Actual   :400
+<Click to see difference>
+
+api_client = <test1.RestfulBookerAPIClient object at 0x000002E84E1DC520>
+
+    def test_update_booking(api_client):
+    
+        booking_id = 1
+        data = {"firstname": "rahul", "lastname": "dravid"}
+    
+        response = api_client.update_booking(booking_id, data)
+>       assert response.status_code == 200
+E       assert 400 == 200
+E        +  where 400 = <Response [400]>.status_code
+
+test1.py:92: AssertionError
+
+test1.py::test_delete_booking PASSED                                     [100%]
+
+========================= 1 failed, 3 passed in 7.06s =========================
+
+Process finished with exit code 1
+
+
+
+
+
+
