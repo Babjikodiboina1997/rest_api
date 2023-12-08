@@ -20,10 +20,6 @@ class TestRestfulBookerAPI(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         self.booking_id = response.json().get("bookingid")
 
-
-        #booking_id = response.json().get("bookingid")
-        #self.assertIsNotNone(booking_id, "Booking ID should not be None")
-
         print(f"Booking created successfully. Booking ID: {self.booking_id}")
         
     def test_get_booking(self):
@@ -37,7 +33,7 @@ class TestRestfulBookerAPI(unittest.TestCase):
     def test_update_booking(self):
         try:
             self.assertIsNotNone(self.booking_id, "Booking ID is required for this test.")
-            update_data = {"firstname": "UpdatedName"}
+            update_data = {"firstname": "rahul"}
             response = requests.put(f"{self.base_url}/booking/{self.booking_id}", json=update_data)
             self.assertEqual(response.status_code, 200)
         except AssertionError as e:
